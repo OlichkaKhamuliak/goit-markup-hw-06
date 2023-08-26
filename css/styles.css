@@ -163,7 +163,7 @@ header>.container {
 
 .logo {
     display: flex;
-    margin-right: 76px;
+    /* margin-right: 76px; */
     color: var(--iris);
     font-family: Raleway, sans-serif;
     font-size: 18px;
@@ -566,7 +566,7 @@ header>.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 190px;
+    min-width: 136px;
     height: 88px;
     flex-shrink: 0;
     border-radius: 4px;
@@ -577,6 +577,11 @@ header>.container {
     --items: 2;
     --indent: 16px;
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+@media screen and (min-width: 428px) {
+    .customers-list-link {
+        min-width: 190px;
+    }
 }
 @media screen and (min-width: 768px) {
     .customers-list-link {
@@ -758,23 +763,41 @@ header>.container {
 */
 .footer-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* 
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .footer-logo-container {
-    display: block;
-    margin-right: 120px;
+    margin-bottom: 72px;
+    /* display: block;
+    margin-right: 120px; */
 }
 
 .footer-section {
     background-color: var(--navy-blue);
-    padding: 100px 0;
+    padding: 96px 0;
+}
+@media screen and (min-width: 768px) {
+    .footer-section {
+        padding: 96px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .footer-section {
+        padding: 100px 0;
+    }
 }
 
 .footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
 }
 
 .footer-desc {
@@ -787,8 +810,9 @@ header>.container {
 /* Footer social media */
 
 .footer-social-container {
-    display: block;
-    margin-right: 80px;
+    /* display: block;
+    margin-right: 80px; */
+    margin-bottom: 72px;
 }
 
 .footer-social-desc,
@@ -831,18 +855,28 @@ header>.container {
 /* Footer form */
 
 .footer-form-container {
-    display: block;
+    /* display: block; */
+    
 }
 
 .footer-form {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 290px;    /* gap: 24px; */
 }
 
-.footer-form-label {}
+.footer-form-label {
+    width: 100%;
+}
 
 .footer-form-input {
-    width: 264px;
+    /* max-width: 398px; */
+    width: 100%;
+    /* width: 264px; */
     height: 40px;
     border-radius: 4px;
     border: 1px solid var(--white);
