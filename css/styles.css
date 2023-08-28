@@ -1288,10 +1288,11 @@ header>.container {
     transition: border-color var(--transition);
 }
 
+.modal-form-input:focus,
 .modal-form-input:focus {
     border-color: #4D5AE5;
 }
-
+.modal-form-input:active+.modal-form-icon,
 .modal-form-input:focus+.modal-form-icon {
     fill: #4D5AE5;
 }
@@ -1323,7 +1324,8 @@ header>.container {
 .modal-form-comment::placeholder {
     color: rgba(46, 47, 66, 0.4);
 }
-.modal-form-comment:active, 
+
+.modal-form-comment:active,
 .modal-form-comment:focus {
     border-color: var(--iris);
 }
