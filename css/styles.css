@@ -680,21 +680,44 @@ header>.container {
   |============================
 */
 .portfolio-section {
-    padding-bottom: 120px;
-    padding-top: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
 
 }
-
+@media only screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+@media only screen and (min-width: 11588px) {
+    .portfolio-section {
+        padding-bottom: 120px;
+        padding-top: 100px;
+    }
+  }
 /* Buttons */
 
 .portfolio-btn-list {
     background-color: var(--white);
-    margin-bottom: 72px;
     display: flex;
-    gap: 24px;
-    justify-content: center;
-
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    justify-content: flex-start;
+    /* justify-content: center; */
+    margin-bottom: 48px;
 }
+@media only screen and (min-width: 768px) {
+    .portfolio-btn-list {
+        margin-bottom: 64px;
+        justify-content: center;
+    }
+  }
+  @media only screen and (min-width: 11588px) {
+      .portfolio-btn-list {
+        margin-bottom: 72px;
+      }
+    }
 
 .portfolio-btn {
     justify-content: center;
@@ -706,13 +729,22 @@ header>.container {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    padding: 12px 24px;
+    padding: 8px 15px;
     border-radius: 4px;
     border: 1px solid var(--corn-flower);
     min-width: 69px;
     min-height: 48px;
 }
-
+@media only screen and (min-width: 321px) {
+    .portfolio-btn {
+      padding: 8px 16px;
+    }
+  }
+@media only screen and (min-width: 768px) {
+  .portfolio-btn {
+    padding: 12px 24px;
+  }
+}
 .portfolio-btn-item {
     transition: background-color var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
@@ -736,10 +768,21 @@ header>.container {
 /* Portfolio photos */
 
 .portfolio-list {
-    --items: 3;
+    display: flex;
+    justify-content: center;
     row-gap: 48px;
-
 }
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    gap: 72px 24px;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 1168px) {
+    .portfolio-list {
+       gap: 48px 24px;
+    }
+  }
 
 .portfolio-list-wrapper {
     padding: 32px 16px;
@@ -750,6 +793,11 @@ header>.container {
 
 .portfolio-list-item {
     background-color: var(--white);
+}
+@media only screen and (min-width: 1158px) {
+    .portfolio-list-item {
+    --items: 3;
+  }
 }
 
 .portfolio-list-link {
@@ -1491,7 +1539,7 @@ input:checked+label>span {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding: 40px;
     padding-top: 80px;
     background-color: var(--white);
