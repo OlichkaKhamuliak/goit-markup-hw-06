@@ -1434,8 +1434,6 @@ input:checked+label>span {
 @media (hover:hover) {
   input:hover+label>span {
       border-color: var(--ocean);
-  } {
-    
   }
 }
 
